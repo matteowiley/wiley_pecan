@@ -30,6 +30,7 @@ gem 'active_model_serializers'
 
 group :development, :test do 
   gem 'rspec-rails'
+  # gem 'rails_helper'
   gem 'guard-rspec'
   gem 'pry-byebug'
   gem "better_errors"
