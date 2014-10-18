@@ -14,6 +14,8 @@ GEM
       activesupport (= 4.1.4)
       builder (~> 3.1)
       erubis (~> 2.7.0)
+    active_model_serializers (0.9.0)
+      activemodel (>= 3.2)
     activemodel (4.1.4)
       activesupport (= 4.1.4)
       builder (~> 3.1)
@@ -52,6 +54,7 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.25.1)
     minitest (5.4.2)
+    modernizr-rails (2.7.1)
     multi_json (1.10.1)
     pg (0.17.1)
     polyglot (0.3.5)
@@ -220,9 +223,11 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_model_serializers
   coffee-rails (~> 4.0.0)
   jbuilder (~> 2.0)
   jquery-rails
+  modernizr-rails
   pg
   rails (= 4.1.4)
   sass-rails (~> 4.0.3)
