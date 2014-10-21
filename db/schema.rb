@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141018185334) do
+ActiveRecord::Schema.define(version: 20141020222951) do
 
   create_table "orders", force: true do |t|
     t.integer  "amount"
@@ -28,12 +28,13 @@ ActiveRecord::Schema.define(version: 20141018185334) do
     t.datetime "updated_at"
   end
 
-  create_table "users", fmorce: true do |t|
+  create_table "users", force: true do |t|
     t.string   "firstname"
     t.string   "lastname"
     t.boolean  "subscribe",  default: true
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "email"
   end
 
 end

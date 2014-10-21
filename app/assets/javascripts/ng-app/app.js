@@ -8,12 +8,17 @@ angular
                 templateUrl: 'home.html',
                 controller: 'HomeCtrl'
             })
-            .when('/hello', {
-                templateUrl: 'hello.html',
-                controller: 'HelloCtrl'
-            });
+            .when('/new', {
+                templateUrl: 'new.html',
+                controller: 'NewCtrl'
+            })
+            // .when('/user', {
+            //     templateUrl: 'user.html',
+            //     controller: 'UserCtrl'
+            // });
         $locationProvider.html5Mode({
             enabled: true,
             requireBase: false
         });
     });
+  
