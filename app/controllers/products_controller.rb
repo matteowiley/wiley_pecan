@@ -2,8 +2,7 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all
-    # render json: @products
-    render json: { message: 'hey' }
+    render json: @products
   end
 
   def show
@@ -24,7 +23,7 @@ class ProductsController < ApplicationController
   end
 
   def edit
-    @product = Product.find(params[:id])
+    @product = Product.find_by(params[:name])
   end
 
   def update 

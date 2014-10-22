@@ -16,6 +16,14 @@ angular
                 templateUrl: 'new.html',
                 controller: 'NewCtrl'
             })
+            .when('/product/edit', {
+                templateUrl: 'edit.html',
+                controller: 'EditCtrl'
+            })
+            .when('/products', {
+                templateUrl: 'products.html',
+                controller: 'ProductCtrl'
+            })
         $locationProvider.html5Mode({
             enabled: true,
             requireBase: false
