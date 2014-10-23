@@ -1,1 +1,33 @@
-<div ng-controller="">
+<div>
+	<table class="table">
+	    <thead>
+	        <tr>
+	            <th>Product ID </th>
+	            <th>Name</th>
+	            <th>Price</th>
+	            <th>Available</th>
+	            <th>Update</th>
+	        </tr>
+	    </thead>
+	    <tbody ng-repeat= "product in products.products">
+	        
+	        <td ng-model="product.product_id">{{product.id}}
+	        </td>
+	        
+	        <td>
+	        	<input class="form-control" id="name" placeholder="{{product.name}}" ng-model="product.newname">
+	        </td>
+	    	
+	    	<td>
+				<input class="form-control" id="name" placeholder= "{{product.price}}" ng-model="product.newprice">
+			</td>
+
+			<td>
+				<input type="radio" name="Available" value="available" ng-model="product.newavailable">
+			</td>
+			<td>
+				<button type="submit" class="btn btn-success" ng-click="editProduct(product)">Update Product</button>
+			</td>
+		</tbody>
+	</table>
+</div>

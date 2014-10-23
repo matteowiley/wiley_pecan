@@ -16,9 +16,9 @@ angular
                 templateUrl: 'new.html',
                 controller: 'NewCtrl'
             })
-            .when('/product/edit', {
+            .when('/products/edit', {
                 templateUrl: 'edit.html',
-                controller: 'EditCtrl'
+                controller: 'ProductCtrl'
             })
             .when('/products', {
                 templateUrl: 'products.html',

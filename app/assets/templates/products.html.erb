@@ -1,6 +1,10 @@
 
-{{products}}
-<div ng-repeat="product in products.products">
-	<h1> {{product.name}} </h1>
-	<h2> {{product.price}} </h2>
-</div>
+
+<table ng-repeat="product in products.products">
+    <tr>
+        <th class= "table_header"> {{product.name}} </th>
+    </tr>
+    <tr>
+        <td> {{product.price}} </td>
+    </tr>
+</table>

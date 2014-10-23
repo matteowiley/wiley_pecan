@@ -17,4 +17,22 @@ angular.module('AngularRails')
             });
         };
         $scope.indexProduct();
+        
+        $scope.editProduct = function(product) {
+            product_id = product.id;
+            $http.put('/api/products/' + product_id, {
+                name: product.newname,
+                price: product.newprice,
+                available: product.newavailable,
+                authenticity_token: product.authToken
+            }).success(function(data, status, headers, config) {
+                product.name = product.newname;
+                product.price = product.newprice;
+                product.available = product.available;
+                console.log(data);
+            }).error(function(err) {
+                console.log(err);
+            });
+        }
+
     });
