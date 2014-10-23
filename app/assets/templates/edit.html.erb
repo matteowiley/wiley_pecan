@@ -5,6 +5,7 @@
 	            <th>Product ID </th>
 	            <th>Name</th>
 	            <th>Price</th>
+	            <th>Description</th>
 	            <th>Available</th>
 	            <th>Update</th>
 	        </tr>
@@ -19,12 +20,17 @@
 	        </td>
 	    	
 	    	<td>
-				<input class="form-control" id="name" placeholder= "{{product.price}}" ng-model="product.newprice">
+				<input class="form-control" id="name" placeholder="{{product.price}}" ng-model="product.newprice">
+			</td>
+
+			<td>
+				<input class="form-control" id="name" placeholder="{{product.description}}" ng-model="product.newdescription">
 			</td>
 
 			<td>
 				<input type="radio" name="Available" value="available" ng-model="product.newavailable">
 			</td>
+			
 			<td>
 				<button type="submit" class="btn btn-success" ng-click="editProduct(product)">Update Product</button>
 			</td>

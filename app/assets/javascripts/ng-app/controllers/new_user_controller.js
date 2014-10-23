@@ -3,8 +3,8 @@ angular.module('AngularRails')
         $scope.newUserModel = {};
         $scope.submitModel = function() {
         	$http.post('/api/users', {
-        		firstName: $scope.newUserModel.firstName,
-        		lastName: $scope.newUserModel.lastName,
+        		firstname: $scope.newUserModel.firstName,
+        		lastname: $scope.newUserModel.lastName,
                 email: $scope.newUserModel.email,
                 authenticity_token: $scope.newUserModel.authToken
         	}).success(function(data, status, headers, config) {

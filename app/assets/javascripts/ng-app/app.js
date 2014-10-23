@@ -12,11 +12,11 @@ angular
                 templateUrl: 'product.html',
                 controller: 'ProductCtrl'
             })
-            .when('/new', {
+            .when('/users/new', {
                 templateUrl: 'new.html',
                 controller: 'NewCtrl'
             })
-            .when('/products/edit', {
+            .when('/product/edit', {
                 templateUrl: 'edit.html',
                 controller: 'ProductCtrl'
             })

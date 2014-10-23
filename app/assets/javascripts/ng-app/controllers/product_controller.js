@@ -5,6 +5,7 @@ angular.module('AngularRails')
         	$http.post('/api/products', {
         		name: $scope.newProductModel.productname,
         		price: $scope.newProductModel.productprice,
+                description: $scope.newProductModel.productdescription,
                 available: $scope.newProductModel.available,
                 authenticity_token: $scope.newProductModel.authToken
         	}).success(function(data, status, headers, config) {});
@@ -23,11 +24,13 @@ angular.module('AngularRails')
             $http.put('/api/products/' + product_id, {
                 name: product.newname,
                 price: product.newprice,
+                description: product.newdescription,
                 available: product.newavailable,
                 authenticity_token: product.authToken
             }).success(function(data, status, headers, config) {
                 product.name = product.newname;
                 product.price = product.newprice;
+                product.description = product.newdescription;
                 product.available = product.available;
                 console.log(data);
             }).error(function(err) {

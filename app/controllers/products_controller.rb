@@ -14,7 +14,7 @@ class ProductsController < ApplicationController
   end
 
   def create
-    @product = Product.new(name: params[:name], price: params[:price], available: params[:available])
+    @product = Product.new(name: params[:name], price: params[:price], description: params[:description], available: params[:available])
     if @product.save
       render json: @product, status: :created, location: @product
     else
@@ -28,7 +28,7 @@ class ProductsController < ApplicationController
 
   def update 
     @product = Product.find(params[:id])
-    @product.update(name: params[:name], price: params[:price], available: params[:available])
+    @product.update(name: params[:name], price: params[:price],  description: params[:description], available: params[:available])
     # redirect_to root_path
   end
  
