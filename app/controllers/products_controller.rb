@@ -29,7 +29,7 @@ class ProductsController < ApplicationController
   def update 
     @product = Product.find(params[:id])
     @product.update(name: params[:name], price: params[:price],  description: params[:description], available: params[:available])
-    # redirect_to root_path
+    render json: @product, status: :accepted
   end
  
 end

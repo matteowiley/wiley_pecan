@@ -1,5 +1,5 @@
 angular.module('AngularRails')
-    .controller('ProductCtrl', function ($scope, $http) {
+    .controller('ProductCtrl', function ($scope, $http, $location) {
         $scope.newProductModel = {};
         $scope.createProduct = function() {
         	$http.post('/api/products', {
@@ -22,17 +22,17 @@ angular.module('AngularRails')
         $scope.editProduct = function(product) {
             product_id = product.id;
             $http.put('/api/products/' + product_id, {
-                name: product.newname,
-                price: product.newprice,
-                description: product.newdescription,
-                available: product.newavailable,
+                name: product.newname || product.name,
+                price: product.newprice || product.price,
+                description: product.newdescription || product.description,
+                available: product.newavailable || product.available,
                 authenticity_token: product.authToken
             }).success(function(data, status, headers, config) {
                 product.name = product.newname;
                 product.price = product.newprice;
                 product.description = product.newdescription;
                 product.available = product.available;
-                console.log(data);
+                $location.path('/products');
             }).error(function(err) {
                 console.log(err);
             });
