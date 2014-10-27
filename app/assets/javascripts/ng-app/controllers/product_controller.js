@@ -14,7 +14,7 @@ angular.module('AngularRails')
 
         $scope.indexProduct = function() {
             $http.get('/api/products').success(function(products) {
-                $scope.products = products
+                $scope.products = products.products
             });
         };
         $scope.indexProduct();

@@ -1,4 +1,4 @@
-
+<!-- 
 
 <table ng-repeat="product in products.products">
     <tr>
@@ -10,4 +10,20 @@
      <tr>
         <td> {{product.description}} </td>
     </tr>
-</table>
+</table> -->
+<div class="products">
+	<div class="container">
+		<div class="col-md-3 product" ng-repeat="product in products">
+			<div><img src="http://www.fillmurray.com/200/300"></div>
+			<div>
+				<h3 class="product name">{{product.name}}</h3>
+			</div>
+			<div>
+				<h5>{{product.price}}</h5>
+			</div>
+			<div>
+				<p>{{product.description}}</p>
+			</div>
+		</div>
+	</div>
+</div>
