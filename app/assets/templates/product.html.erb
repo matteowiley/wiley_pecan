@@ -1,34 +1,36 @@
-<form class="form-horizontal" role="form" ng-submit="createProduct()">
-  <div class="form">
-    <label for="productname" class="col-sm-2 control-label">Product name:</label>
-    <div class="userinfo">
-      <input class="form-control" id="productname" placeholder="Product name" ng-model="newProductModel.productname">
+<div class="col-md-4"></div>
+<div class="col-md-4">
+  <h5 class="titleform">Add new product: </h5>
+  <form class="form-horizontal" role="form" ng-submit="createProduct()">
+    <div class="form">
+      <div class="userinfo">
+        <input class="form-control" id="productname" placeholder="Product name" ng-model="newProductModel.productname">
+      </div>
     </div>
-  </div>
-  
-  <div class="form">
-    <label for="product form price" class="col-sm-2 control-label">Product Price:</label>
-    <div class="userinfo">
-      <input class="form-control" id="productprice" placeholder="Product Price" ng-model="newProductModel.productprice">
+    
+    <div class="form">
+      <div class="userinfo">
+        <input class="form-control" id="productprice" placeholder="Product Price" ng-model="newProductModel.productprice">
+      </div>
     </div>
-  </div>
 
-  <div class="form">
-    <label for="product form description" class="col-sm-2 control-label">Product Description:</label>
-    <div class="userinfo">
-      <input class="form-control" id="productdescription" placeholder="Product Description" ng-model="newProductModel.productdescription">
+    <div class="form">
+      <div class="userinfo">
+        <input class="form-control" id="productdescription" placeholder="Product Description" ng-model="newProductModel.productdescription">
+      </div>
     </div>
-  </div>
 
-  <div class="form">
-    <div class="product form available">
-     <input type="radio" name="Available" value="available" ng-model="newProductModel.available">Available<br>
+    <div class="form">
+      <div class="product form available">
+       <input type="radio" name="Available" value="available" ng-model="newProductModel.available">Available<br>
+      </div>
     </div>
-  </div>
- 
-  <div class="form">
-    <div class="userin">
-      <button type="submit" class="btn btn-success">Sign up</button>
+   
+    <div class="form">
+      <div class="userin">
+        <button type="submit" class="btn btn-success">Sign up</button>
+      </div>
     </div>
-  </div>
-</form>
+  </form>
+</div>
+<div class="col-md-4"></div>
