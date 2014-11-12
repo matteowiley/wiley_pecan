@@ -4,12 +4,26 @@
 
 
 .products {
+	padding-top: 5em;
 	h3, h5 {
 		text-align: center;
+		font-family: 'Abril Fatface', cursive;
 	}
 }
 .btn {
-	.buy{
-		text-align: center;
+	margin: auto;
+	display: block;
+		&.buy{
+			text-align: center;
+			margin: auto;
+	display: block;
+		}
+} 
+.image {
+	img {
+		max-width: 100%;
 	}
+}
+p {
+	font-family: 'Abril Fatface', cursive;
 }

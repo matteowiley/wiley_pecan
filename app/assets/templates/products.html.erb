@@ -14,7 +14,9 @@
 <div class="products">
 	<div class="container">
 		<div class="col-md-3 product" ng-repeat="product in products">
-			<div><img src="http://www.fillmurray.com/200/300"></div>
+			<div class="image">
+				<%= image_tag('pecan.jpg') %>
+			</div>
 			<div>
 				<h3 class="product name">{{product.name}}</h3>
 			</div>
